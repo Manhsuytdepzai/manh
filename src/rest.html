@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for selected tab */
+        .tab-selected {
+            border-bottom: 2px solid white;
+            font-weight: bold;
+            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex h-screen w-full justify-center pt-24 px-4 ">
+        <div class="w-full max-w-md">
+            <!-- title -->
+            <h2 class="text-lg font-semibold mb-4">Mã ưu đãi từ gia dụng ABC</h2>
+            <div class="input-wrapper flex gap-2 mb-4">
+                <input type="text" placeholder="Nhập mã ưu đãi" class="flex-1 p-3 border rounded-xl bg-white/10" data-listener-added_0e01c402="true">
+                <button class="bg-blue-500 text-white rounded-lg p-2">Áp dụng</button>
+            </div>
+            <!-- Tab list -->
+            <div id="tabs" class="flex gap-4 mb-3">
+                <button class="py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-white/5 tab-selected" data-tab="all">Tất cả</button>
+                <button class="py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-white/5" data-tab="shipping">Vận chuyển</button>
+                <button class="py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-white/5" data-tab="offers">Ưu đãi khác</button>
+            </div>
+            
+            <!-- Scrollable Tab panels -->
+            <div class="h-96 overflow-y-auto space-y-4 p-4 bg-gray-800 rounded-lg">
+                <div id="all" class="space-y-4 tab-content hidden">
+                    <!-- Post items for "Tất cả" -->
+                    <div class="relative flex items-center ">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 15% tối đa 50k đơn từ 1k</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 31/07/2024</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center ">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 10% tối đa 100K cho đơn từ 500K</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 15/08/2024</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center ">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 20% cho đơn hàng trên 200K</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 30/09/2024</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center ">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 25% cho đơn hàng trên 300K</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 10/10/2024</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 30% cho đơn hàng trên 500K</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 20/11/2024</p>
+                        </div>
+                    </div>
+                    <div class="relative flex items-center">
+                        <div>
+                            <input type="checkbox" class="mr-3">
+                        </div>
+                        <div class="flex-1 p-3 border rounded-xl bg-white/10">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold">Giảm 5% cho tất cả đơn hàng</span>
+                                <button class="ml-3 text-white focus:outline-none flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full" aria-label="More details" data-details="thông tin giảm">
+                                    !
+                                </button>
+                            </div>
+                            <p class="text-white/50 mt-1">HSD: 01/12/2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer flex justify-between items-center pt-4 border-t">
+                <div class="savings-container">
+                    <span class="savings">Tiết kiệm</span>
+                    <span class="savings amount">25.000đ</span>
+                </div>
+                <button class="apply bg-blue-500 text-white rounded-lg p-2">
+                    Áp dụng (<!-- -->0<!-- -->)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Dialog -->
+    <div id="details-dialog" class="fixed inset-0 z-10 hidden items-center justify-center min-h-screen bg-black bg-opacity-50">
+        <div class="bg-black rounded-lg p-6 max-w-sm mx-auto">
+            <h2 class="text-lg font-bold">Chi tiết voucher!</h2>
+            <p id="dialog-content" class="mt-2"></p>
+            <button id="close-dialog" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for tab switching
+        const tabs = document.querySelectorAll('#tabs button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('tab-selected'));
+                contents.forEach(content => content.classList.add('hidden'));
+
+                const targetTab = tab.dataset.tab;
+                document.getElementById(targetTab).classList.remove('hidden');
+                tab.classList.add('tab-selected');
+            });
+        });
+
+        // JavaScript for toggling the dialog
+        const buttons = document.querySelectorAll('[aria-label="More details"]');
+        const dialog = document.getElementById('details-dialog');
+        const dialogContent = document.getElementById('dialog-content');
+        const closeDialogButton = document.getElementById('close-dialog');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                dialogContent.textContent = button.getAttribute('data-details');
+                dialog.classList.remove('hidden');
+            });
+        });
+
+        closeDialogButton.addEventListener('click', () => {
+            dialog.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
